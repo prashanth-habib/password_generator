@@ -7,15 +7,15 @@ import random
 
 
 class PasswdGenerator:
-    passwd_length = 0
+    passwd_length = 5
 
-    def get_length(self):
+    def set_length(self, new_length):
         """
         This method stores the length of the password to be generated.
         :return: none
         """
         #pass_len = int(input("Enter the length of the password:"))
-        self.passwd_length = 16
+        self.passwd_length = new_length
 
     def generate_passwd(self):
         """
@@ -23,7 +23,7 @@ class PasswdGenerator:
         :return: password
         """
         passwd = ""
-        self.get_length()
+        #self.get_length()
         chars = list(string.ascii_lowercase) + list(string.ascii_uppercase) + list(string.digits) + list(
             string.punctuation)
         for i in range(0, self.passwd_length):
